@@ -1,1 +1,395 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ερωτήσεις Πολλαπλής Επιλογής - Εποχή του Χαλκού</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .correct {
+            background-color: #d4edda;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+        }
+        .score-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .section-title {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="score-container">
+        <div>Σκορ: <span class="score">0</span>/25</div>
+    </div>
 
+    <h1>Ερωτήσεις Πολλαπλής Επιλογής</h1>
+    <h2>Εποχή του Χαλκού</h2>
+
+    <div class="section-title">
+        <h2>Κυκλαδικός Πολιτισμός</h2>
+    </div>
+
+    <div class="question" id="q1">
+        <p>1. Ποιο ήταν το κύριο οικοδομικό υλικό για τα ειδώλια της Κυκλαδικής τέχνης;</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a"> α) Πηλός</label>
+            <label><input type="radio" name="q1" value="b"> β) Μάρμαρο</label>
+            <label><input type="radio" name="q1" value="c"> γ) Ξύλο</label>
+        </div>
+    </div>
+
+    <div class="question" id="q2">
+        <p>2. Ποια περίοδος χαρακτηρίζεται από την οχύρωση των κυκλαδικών οικισμών;</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a"> α) Περίπου το 2300 π.Χ.</label>
+            <label><input type="radio" name="q2" value="b"> β) Περίπου το 1600 π.Χ.</label>
+            <label><input type="radio" name="q2" value="c"> γ) Περίπου το 1000 π.Χ.</label>
+        </div>
+    </div>
+
+    <div class="question" id="q3">
+        <p>3. Ποιο νησί είχε οικισμό οχυρωμένο μακριά από τη θάλασσα;</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a"> α) Κέα</label>
+            <label><input type="radio" name="q3" value="b"> β) Σύρος</label>
+            <label><input type="radio" name="q3" value="c"> γ) Θήρα</label>
+        </div>
+    </div>
+
+    <div class="question" id="q4">
+        <p>4. Τι χαρακτήρα είχαν τα περισσότερα αγγεία της Κυκλαδικής περιόδου;</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="a"> α) Με έντονη πολυχρωμία</label>
+            <label><input type="radio" name="q4" value="b"> β) Με απλά γραμμικά σχέδια</label>
+            <label><input type="radio" name="q4" value="c"> γ) Με μεταλλική διακόσμηση</label>
+        </div>
+    </div>
+
+    <div class="question" id="q5">
+        <p>5. Ποιο γεγονός γύρω στο 1600 π.Χ. επηρέασε την πορεία των Κυκλάδων;</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="a"> α) Επιδημία</label>
+            <label><input type="radio" name="q5" value="b"> β) Σεισμός</label>
+            <label><input type="radio" name="q5" value="c"> γ) Λιμός</label>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Μινωικός Πολιτισμός</h2>
+    </div>
+
+    <div class="question" id="q6">
+        <p>6. Ποια πόλη θεωρείται το σημαντικότερο διοικητικό κέντρο της Μινωικής Κρήτης;</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="a"> α) Ζάκρος</label>
+            <label><input type="radio" name="q6" value="b"> β) Κνωσός</label>
+            <label><input type="radio" name="q6" value="c"> γ) Ρόδος</label>
+        </div>
+    </div>
+
+    <div class="question" id="q7">
+        <p>7. Ποια από τις παρακάτω περιοχές δεν είχε μινωικό ανάκτορο;</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="a"> α) Φαιστός</label>
+            <label><input type="radio" name="q7" value="b"> β) Μάλια</label>
+            <label><input type="radio" name="q7" value="c"> γ) Θήβα</label>
+        </div>
+    </div>
+
+    <div class="question" id="q8">
+        <p>8. Ποια ήταν η κύρια εξαγωγική δραστηριότητα των Μινωιτών;</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="a"> α) Μεταφορά δούλων</label>
+            <label><input type="radio" name="q8" value="b"> β) Εμπόριο αγροτικών προϊόντων και τεχνουργημάτων</label>
+            <label><input type="radio" name="q8" value="c"> γ) Κατασκευή πολεμικών όπλων</label>
+        </div>
+    </div>
+
+    <div class="question" id="q9">
+        <p>9. Ποια ήταν η λειτουργία των ανακτόρων στην Κρήτη;</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="a"> α) Καθαρά κατοικίες ευγενών</label>
+            <label><input type="radio" name="q9" value="b"> β) Θρησκευτικά κέντρα μόνο</label>
+            <label><input type="radio" name="q9" value="c"> γ) Διοικητικά, οικονομικά και καλλιτεχνικά κέντρα</label>
+        </div>
+    </div>
+
+    <div class="question" id="q10">
+        <p>10. Ποιο στοιχείο χαρακτηρίζει τη δομή των μινωικών ανακτόρων;</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="a"> α) Κυκλική εσωτερική αυλή</label>
+            <label><input type="radio" name="q10" value="b"> β) Ορθογώνια κεντρική αυλή με πολλές πτέρυγες</label>
+            <label><input type="radio" name="q10" value="c"> γ) Τεράστια τείχη και προμαχώνες</label>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Μινωική Θρησκεία και Τέχνη</h2>
+    </div>
+
+    <div class="question" id="q11">
+        <p>11. Ποιο σύμβολο ήταν ιερό για τους Μινωίτες και σχετιζόταν με τη θρησκεία τους;</p>
+        <div class="options">
+            <label><input type="radio" name="q11" value="a"> α) Σταυρός</label>
+            <label><input type="radio" name="q11" value="b"> β) Ελιά</label>
+            <label><input type="radio" name="q11" value="c"> γ) Χρυσό στεφάνι</label>
+        </div>
+    </div>
+
+    <div class="question" id="q12">
+        <p>12. Τι απεικονίζεται συχνά στις τοιχογραφίες της Κνωσού;</p>
+        <div class="options">
+            <label><input type="radio" name="q12" value="a"> α) Πόλεμοι και μάχες</label>
+            <label><input type="radio" name="q12" value="b"> β) Λατρευτικές πομπές και σκηνές φύσης</label>
+            <label><input type="radio" name="q12" value="c"> γ) Σκηνές καθημερινής ζωής</label>
+        </div>
+    </div>
+
+    <div class="question" id="q13">
+        <p>13. Ποιο χαρακτηριστικό είχαν τα καμαραϊκά αγγεία;</p>
+        <div class="options">
+            <label><input type="radio" name="q13" value="a"> α) Ποικιλία χρωμάτων και φανταχτερά σχήματα</label>
+            <label><input type="radio" name="q13" value="b"> β) Μονόχρωμη διακόσμηση</label>
+            <label><input type="radio" name="q13" value="c"> γ) Σκαλιστές απεικονίσεις θεών</label>
+        </div>
+    </div>
+
+    <div class="question" id="q14">
+        <p>14. Ποια ήταν η σημαντικότερη θηλυκή θεότητα των Μινωιτών σύμφωνα με τα ειδώλια;</p>
+        <div class="options">
+            <label><input type="radio" name="q14" value="a"> α) Άρτεμις</label>
+            <label><input type="radio" name="q14" value="b"> β) Πότνια</label>
+            <label><input type="radio" name="q14" value="c"> γ) Μητέρα-Γη</label>
+        </div>
+    </div>
+
+    <div class="question" id="q15">
+        <p>15. Ποιο στοιχείο δεν αποτελεί έκφραση της μινωικής τέχνης;</p>
+        <div class="options">
+            <label><input type="radio" name="q15" value="a"> α) Αγγεία με χταπόδια</label>
+            <label><input type="radio" name="q15" value="b"> β) Πολεμικές τοιχογραφίες</label>
+            <label><input type="radio" name="q15" value="c"> γ) Κοσμήματα από χρυσό</label>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Μυκηναϊκός Πολιτισμός</h2>
+    </div>
+
+    <div class="question" id="q16">
+        <p>16. Ποια πόλη έδωσε το όνομά της στον Μυκηναϊκό πολιτισμό;</p>
+        <div class="options">
+            <label><input type="radio" name="q16" value="a"> α) Τροία</label>
+            <label><input type="radio" name="q16" value="b"> β) Μυκήνες</label>
+            <label><input type="radio" name="q16" value="c"> γ) Πύλος</label>
+        </div>
+    </div>
+
+    <div class="question" id="q17">
+        <p>17. Ποιο ήταν το κύριο διοικητικό και πολιτικό κέντρο κάθε μυκηναϊκής επικράτειας;</p>
+        <div class="options">
+            <label><input type="radio" name="q17" value="a"> α) Η αγορά</label>
+            <label><input type="radio" name="q17" value="b"> β) Ο ναός</label>
+            <label><input type="radio" name="q17" value="c"> γ) Το ανάκτορο</label>
+        </div>
+    </div>
+
+    <div class="question" id="q18">
+        <p>18. Ποια γραφή χρησιμοποίησαν οι Μυκηναίοι για την καταγραφή εμπορικών δραστηριοτήτων;</p>
+        <div class="options">
+            <label><input type="radio" name="q18" value="a"> α) Γραμμική Α</label>
+            <label><input type="radio" name="q18" value="b"> β) Γραμμική Β</label>
+            <label><input type="radio" name="q18" value="c"> γ) Ιερογλυφικά</label>
+        </div>
+    </div>
+
+    <div class="question" id="q19">
+        <p>19. Ποια ήταν η βάση της μυκηναϊκής οικονομίας;</p>
+        <div class="options">
+            <label><input type="radio" name="q19" value="a"> α) Ναυτικό και στρατός</label>
+            <label><input type="radio" name="q19" value="b"> β) Γεωργία, κτηνοτροφία και εμπόριο</label>
+            <label><input type="radio" name="q19" value="c"> γ) Δασμοί και φόροι</label>
+        </div>
+    </div>
+
+    <div class="question" id="q20">
+        <p>20. Ποιοι ήταν οι πιθανοί λόγοι για την κατάρρευση του μυκηναϊκού κόσμου;</p>
+        <div class="options">
+            <label><input type="radio" name="q20" value="a"> α) Μόνο η κάθοδος των Δωριέων</label>
+            <label><input type="radio" name="q20" value="b"> β) Οικονομική κρίση, εισβολές, εσωτερικές αναταραχές</label>
+            <label><input type="radio" name="q20" value="c"> γ) Έλλειψη πρώτων υλών</label>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Μυκηναϊκή Θρησκεία και Τέχνη</h2>
+    </div>
+
+    <div class="question" id="q21">
+        <p>21. Ποιος θεός δεν αναφέρεται στις πινακίδες της Γραμμικής Β;</p>
+        <div class="options">
+            <label><input type="radio" name="q21" value="a"> α) Ζευς</label>
+            <label><input type="radio" name="q21" value="b"> β) Απόλλωνας</label>
+            <label><input type="radio" name="q21" value="c"> γ) Ποσειδών</label>
+        </div>
+    </div>
+
+    <div class="question" id="q22">
+        <p>22. Ποιο ήταν το χαρακτηριστικό σχήμα των μυκηναϊκών ανακτόρων;</p>
+        <div class="options">
+            <label><input type="radio" name="q22" value="a"> α) Τύπος μεγάρου με κυκλική εστία</label>
+            <label><input type="radio" name="q22" value="b"> β) Πολλά ανεξάρτητα δωμάτια</label>
+            <label><input type="radio" name="q22" value="c"> γ) Υπόγεια καταφύγια</label>
+        </div>
+    </div>
+
+    <div class="question" id="q23">
+        <p>23. Ποιο χαρακτηριστικό είχαν οι θολωτοί τάφοι των Μυκηναίων;</p>
+        <div class="options">
+            <label><input type="radio" name="q23" value="a"> α) Χτίζονταν υπόγεια</label>
+            <label><input type="radio" name="q23" value="b"> β) Είχαν κυκλικό θάλαμο και καλύπτονταν με χώμα</label>
+            <label><input type="radio" name="q23" value="c"> γ) Βρίσκονταν πάντα εντός του ανακτόρου</label>
+        </div>
+    </div>
+
+    <div class="question" id="q24">
+        <p>24. Ποιο από τα παρακάτω είναι παράδειγμα μυκηναϊκής μεταλλοτεχνίας;</p>
+        <div class="options">
+            <label><input type="radio" name="q24" value="a"> α) Χρυσές προσωπίδες</label>
+            <label><input type="radio" name="q24" value="b"> β) Πήλινα αγγεία</label>
+            <label><input type="radio" name="q24" value="c"> γ) Καμαραϊκά αγγεία</label>
+        </div>
+    </div>
+
+    <div class="question" id="q25">
+        <p>25. Ποια ήταν η χρήση των τοιχογραφιών στα μυκηναϊκά ανάκτορα;</p>
+        <div class="options">
+            <label><input type="radio" name="q25" value="a"> α) Πληροφοριακή για το ιερατείο</label>
+            <label><input type="radio" name="q25" value="b"> β) Διακοσμητική, με σκηνές από ανθρώπους, ζώα και άρματα</label>
+            <label><input type="radio" name="q25" value="c"> γ) Γεωγραφική απεικόνιση των περιοχών</label>
+        </div>
+    </div>
+
+    <script>
+        // Correct answers based on the document
+        const correctAnswers = {
+            q1: "b",
+            q2: "a",
+            q3: "b",
+            q4: "b",
+            q5: "b",
+            q6: "b",
+            q7: "c",
+            q8: "b",
+            q9: "c",
+            q10: "b",
+            q11: "b",
+            q12: "b",
+            q13: "a",
+            q14: "c",
+            q15: "b",
+            q16: "b",
+            q17: "c",
+            q18: "b",
+            q19: "b",
+            q20: "b",
+            q21: "b",
+            q22: "a",
+            q23: "b",
+            q24: "a",
+            q25: "b"
+        };
+
+        let score = 0;
+        const answeredQuestions = new Set();
+        const scoreElement = document.querySelector('.score');
+
+        // Add event listeners to all radio buttons
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const questionId = this.name;
+                
+                // Check if this question was already answered
+                if (answeredQuestions.has(questionId)) {
+                    return;
+                }
+                
+                const selectedValue = this.value;
+                const questionElement = document.getElementById(questionId);
+                const isCorrect = selectedValue === correctAnswers[questionId];
+                
+                if (isCorrect) {
+                    // Correct answer - highlight in green
+                    questionElement.classList.add('correct');
+                    score++;
+                    scoreElement.textContent = score;
+                } else {
+                    // Incorrect answer - highlight selected option in red
+                    questionElement.classList.add('incorrect');
+                    const correctOption = questionElement.querySelector(`input[value="${correctAnswers[questionId]}"]`).parentNode;
+                    correctOption.style.backgroundColor = '#d4edda';
+                    this.parentNode.style.backgroundColor = '#f8d7da';
+                }
+                
+                // Disable all options for this question
+                questionElement.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = true;
+                });
+                
+                // Mark this question as answered
+                answeredQuestions.add(questionId);
+            });
+        });
+    </script>
+</body>
+</html>
