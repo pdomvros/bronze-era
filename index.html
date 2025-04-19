@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <h1>1ο Γυμνάσιο Πυλαίας</h1>
-    <h2>Επανάληψη της Ιστορίας Α’ Γυμνασίου</h2>
-    <div class="creator">Δημιουργία/Επιμέλεια: Παναγιώτης Δόμβρος (CC BY-NC)</div>
-    <div class="director">Διευθυντής 1ου Γυμνασίου Πυλαίας</div>
     <title>Εποχή του Χαλκού</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comfortaa', Arial, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
+            background-color: #000;
+            color: #FFD700;
         }
-        h1, h2 {
-            color: #2c3e50;
+        .header {
             text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #FFD700;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 1.5em;
+        }
+        .creator, .director {
+            margin: 5px 0;
+            font-size: 0.9em;
         }
         .question {
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #222;
+            border-left: 4px solid #FFD700;
         }
         .options {
             margin-left: 20px;
@@ -34,40 +50,56 @@
             display: block;
             margin: 8px 0;
             cursor: pointer;
+            transition: all 0.3s;
+        }
+        label:hover {
+            color: #FFF;
         }
         input[type="radio"] {
             margin-right: 10px;
+            accent-color: #FFD700;
         }
         .correct {
-            background-color: #d4edda;
+            background-color: #2a5a2a;
         }
         .incorrect {
-            background-color: #f8d7da;
+            background-color: #5a2a2a;
         }
         .score-container {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #f8f9fa;
+            background-color: #222;
             padding: 10px 15px;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 5px rgba(255,215,0,0.3);
+            border: 1px solid #FFD700;
         }
         .score {
             font-weight: bold;
             font-size: 1.2em;
+            color: #FFD700;
         }
         .disabled {
-            opacity: 0.6;
+            opacity: 0.7;
             pointer-events: none;
         }
         .section-title {
-            background-color: #e9ecef;
+            background-color: #333;
             padding: 10px;
             border-radius: 5px;
             margin-top: 30px;
             margin-bottom: 15px;
+            border-left: 4px solid #FFD700;
+        }
+        .section-title h2 {
+            margin: 5px 0;
+        }
+        .credits {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #888;
         }
     </style>
 </head>
@@ -76,8 +108,14 @@
         <div>Σκορ: <span class="score">0</span>/25</div>
     </div>
 
-    <h1>Ερωτήσεις Πολλαπλής Επιλογής</h1>
-    <h2>Εποχή του Χαλκού</h2>
+    <div class="header">
+        <h1>1ο Γυμνάσιο Πυλαίας</h1>
+        <h2>Επανάληψη της Ιστορίας Α' Γυμνασίου</h2>
+        <div class="creator">Δημιουργία/Επιμέλεια: Παναγιώτης Δόμβρος (CC BY-NC)</div>
+        <div class="director">Διευθυντής 1ου Γυμνασίου Πυλαίας</div>
+        <h2>Ερωτήσεις Πολλαπλής Επιλογής</h2>
+        <h2>Η Εποχή του Χαλκού</h2>
+    </div>
 
     <div class="section-title">
         <h2>Κυκλαδικός Πολιτισμός</h2>
@@ -324,6 +362,10 @@
         </div>
     </div>
 
+    <div class="credits">
+        <p>Δημιουργήθηκε για εκπαιδευτικούς σκοπούς - 1ο Γυμνάσιο Πυλαίας</p>
+    </div>
+
     <script>
         // Correct answers based on the document
         const correctAnswers = {
@@ -381,8 +423,8 @@
                     // Incorrect answer - highlight selected option in red
                     questionElement.classList.add('incorrect');
                     const correctOption = questionElement.querySelector(`input[value="${correctAnswers[questionId]}"]`).parentNode;
-                    correctOption.style.backgroundColor = '#d4edda';
-                    this.parentNode.style.backgroundColor = '#f8d7da';
+                    correctOption.style.backgroundColor = '#2a5a2a';
+                    this.parentNode.style.backgroundColor = '#5a2a2a';
                 }
                 
                 // Disable all options for this question
